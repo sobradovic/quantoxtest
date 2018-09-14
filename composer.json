@@ -1,0 +1,12 @@
+{
+    "require": {
+        "ircmaxell/password-compat": "^1.0",
+        "klein/klein": "^2.1",
+        "twig/twig": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

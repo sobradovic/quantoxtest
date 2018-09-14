@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>Results</h1>
+
+        {% if users %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <th scope="row">{{ user.id|e }}</th>
+                            <td>{{ user.name|e }}</td>
+                            <td>{{ user.email|e }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        {% else %}
+            <div class="alert alert-warning">
+                No results found.
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

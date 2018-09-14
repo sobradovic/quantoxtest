@@ -1,0 +1,6 @@
+=== Install all packages via composer ===
+- composer install
+
+=== Set DB ===
+- set DB credentials, file : app/Database/DB.php, line: 13
+- insert DB, file: quantoxtest.sql
